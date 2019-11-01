@@ -1,0 +1,4 @@
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWebApp\TiendaWebApp\bin\TiendaWebApp.dll
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWebApp\TiendaWebApp\bin\TiendaWebApp.pdb
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWebApp\TiendaWebApp\obj\Debug\TiendaWebApp.dll
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWebApp\TiendaWebApp\obj\Debug\TiendaWebApp.pdb

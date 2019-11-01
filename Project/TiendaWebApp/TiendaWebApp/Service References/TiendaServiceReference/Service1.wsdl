@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getAllProductsNames">
+        <s:complexType />
+      </s:element>
+      <s:element name="getAllProductsNamesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getAllProductsNamesResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExistProduct">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExistProductResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ExistProductResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getProductIDResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductSells">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductSellsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getProductSellsResult" type="tns:ArrayOfInt" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfInt">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="int" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getProductAverageSells">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getProductAverageSellsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getProductAverageSellsResult" type="s:float" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormatoCorrecto">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="itemID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormatoCorrectoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormatoCorrectoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="getAllProductsNamesSoapIn">
+    <wsdl:part name="parameters" element="tns:getAllProductsNames" />
+  </wsdl:message>
+  <wsdl:message name="getAllProductsNamesSoapOut">
+    <wsdl:part name="parameters" element="tns:getAllProductsNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExistProductSoapIn">
+    <wsdl:part name="parameters" element="tns:ExistProduct" />
+  </wsdl:message>
+  <wsdl:message name="ExistProductSoapOut">
+    <wsdl:part name="parameters" element="tns:ExistProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getProductID" />
+  </wsdl:message>
+  <wsdl:message name="getProductIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getProductIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductSellsSoapIn">
+    <wsdl:part name="parameters" element="tns:getProductSells" />
+  </wsdl:message>
+  <wsdl:message name="getProductSellsSoapOut">
+    <wsdl:part name="parameters" element="tns:getProductSellsResponse" />
+  </wsdl:message>
+  <wsdl:message name="getProductAverageSellsSoapIn">
+    <wsdl:part name="parameters" element="tns:getProductAverageSells" />
+  </wsdl:message>
+  <wsdl:message name="getProductAverageSellsSoapOut">
+    <wsdl:part name="parameters" element="tns:getProductAverageSellsResponse" />
+  </wsdl:message>
+  <wsdl:message name="FormatoCorrectoSoapIn">
+    <wsdl:part name="parameters" element="tns:FormatoCorrecto" />
+  </wsdl:message>
+  <wsdl:message name="FormatoCorrectoSoapOut">
+    <wsdl:part name="parameters" element="tns:FormatoCorrectoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getAllProductsNames">
+      <wsdl:input message="tns:getAllProductsNamesSoapIn" />
+      <wsdl:output message="tns:getAllProductsNamesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExistProduct">
+      <wsdl:input message="tns:ExistProductSoapIn" />
+      <wsdl:output message="tns:ExistProductSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductID">
+      <wsdl:input message="tns:getProductIDSoapIn" />
+      <wsdl:output message="tns:getProductIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductSells">
+      <wsdl:input message="tns:getProductSellsSoapIn" />
+      <wsdl:output message="tns:getProductSellsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getProductAverageSells">
+      <wsdl:input message="tns:getProductAverageSellsSoapIn" />
+      <wsdl:output message="tns:getProductAverageSellsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="FormatoCorrecto">
+      <wsdl:input message="tns:FormatoCorrectoSoapIn" />
+      <wsdl:output message="tns:FormatoCorrectoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllProductsNames">
+      <soap:operation soapAction="http://tempuri.org/getAllProductsNames" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistProduct">
+      <soap:operation soapAction="http://tempuri.org/ExistProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductID">
+      <soap:operation soapAction="http://tempuri.org/getProductID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductSells">
+      <soap:operation soapAction="http://tempuri.org/getProductSells" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductAverageSells">
+      <soap:operation soapAction="http://tempuri.org/getProductAverageSells" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatoCorrecto">
+      <soap:operation soapAction="http://tempuri.org/FormatoCorrecto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAllProductsNames">
+      <soap12:operation soapAction="http://tempuri.org/getAllProductsNames" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExistProduct">
+      <soap12:operation soapAction="http://tempuri.org/ExistProduct" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductID">
+      <soap12:operation soapAction="http://tempuri.org/getProductID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductSells">
+      <soap12:operation soapAction="http://tempuri.org/getProductSells" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProductAverageSells">
+      <soap12:operation soapAction="http://tempuri.org/getProductAverageSells" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FormatoCorrecto">
+      <soap12:operation soapAction="http://tempuri.org/FormatoCorrecto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="http://localhost:1030/Service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="http://localhost:1030/Service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

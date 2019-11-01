@@ -1,0 +1,4 @@
+c:\users\administrador1\documents\visual studio 2010\Projects\EstudiantesWS\EstudiantesWS\bin\EstudiantesWS.dll
+c:\users\administrador1\documents\visual studio 2010\Projects\EstudiantesWS\EstudiantesWS\bin\EstudiantesWS.pdb
+c:\users\administrador1\documents\visual studio 2010\Projects\EstudiantesWS\EstudiantesWS\obj\Debug\EstudiantesWS.dll
+c:\users\administrador1\documents\visual studio 2010\Projects\EstudiantesWS\EstudiantesWS\obj\Debug\EstudiantesWS.pdb

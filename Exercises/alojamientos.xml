@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl” href=alojamientos.xsl”?>
+<alojamientos>
+	<hoteles>
+		<hotel id=1>
+			<nombre>Melia Havana</nombre>
+			<localizacion>
+				<pais>Cuba</pais>
+				<ciudad>La Habana</ciudad>
+				<region>Occidente</region>
+			</localizacion>
+			<habitaciones>
+				<dobles>
+					<No>100</No>
+					<precio>250</precio>
+				</dobles>
+				<simples>
+					<No>200</No>
+					<precio>150</precio>
+				</simples>
+			</habitaciones>
+			<piscina>si</piscina>
+		</hotel>
+	</hoteles>
+	<cadenas>
+		<cadena id=1>
+			<nombre>Melia</nombre>
+			<localizacion>
+				<pais>Cuba</pais>
+				<ciudad>La Habana</ciudad>
+				<region>Occidente</region>
+			</localizacion>
+		</cadena>
+	</cadenas>
+</alojamientos>

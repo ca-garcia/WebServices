@@ -1,0 +1,5 @@
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWS\TiendaWS\bin\TiendaWS.dll
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWS\TiendaWS\bin\TiendaWS.pdb
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWS\TiendaWS\obj\Debug\TiendaWS.csprojResolveAssemblyReference.cache
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWS\TiendaWS\obj\Debug\TiendaWS.dll
+c:\users\jobs\documents\visual studio 2012\Projects\TiendaWS\TiendaWS\obj\Debug\TiendaWS.pdb

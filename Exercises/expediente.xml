@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="expediente.xsl"?>
+<expediente alumno="Linus Torvalds">
+<asignatura id="1">
+<nombre>Programación básica</nombre>
+<nota>4</nota>
+</asignatura>
+<asignatura id="2">
+<nombre>Sistemas operativos</nombre>
+<nota>5</nota>
+</asignatura>
+<asignatura id="3">
+<nombre>Filosofia</nombre>
+<nota>3</nota>
+</asignatura>
+</expediente>
